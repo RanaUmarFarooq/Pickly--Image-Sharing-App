@@ -31,13 +31,20 @@
   --text-grey: #9094a6;
   --text-bold: #fefefe;
   --search-bar-border-color: rgb(114, 88, 242);
+  --menu-item-active-color: #1c212a;
+
+  /* ============ FONT SIZES ============ */
+  --app-name-font: 1.5rem;
+  --small-font: 0.95rem;
+  --normal-font: 1rem;
 }
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #ffffff;
+  color: var(--text-grey);
   font-family: "Roboto", sans-serif;
   background: var(--body-bg-color);
+  font-size: var(--small-font);
 }

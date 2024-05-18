@@ -1,26 +1,28 @@
 import React from "react";
 import styles from "./MenuBar.module.css";
+import { HiOutlineHome } from "react-icons/hi2";
+import { MdFavoriteBorder, MdWindow } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 const MenuBar = () => {
   const menuBar = [
     {
       name: "Home",
-      icon: <FaHome />,
+      icon: <HiOutlineHome />,
     },
     {
       name: "Favorite",
-      icon: <FaHome />,
+      icon: <MdFavoriteBorder />,
     },
     {
       name: "Personal Feed",
-      icon: <FaHome />,
+      icon: <MdWindow />,
     },
   ];
   return (
     <div>
       {menuBar.map((item, index) => (
         <div key={index} className={styles.menu_item}>
-          {item.icon}
+          <span className={styles.item_icon}>{item.icon}</span>
           <span>{item.name}</span>
         </div>
       ))}

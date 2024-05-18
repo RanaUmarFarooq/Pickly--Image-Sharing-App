@@ -8,7 +8,7 @@
   border-right-color: var(--side-bar-border-color);
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 2.5rem 0;
 }
 .app_branding {
   display: flex;
@@ -26,8 +26,9 @@
   border-radius: 5px;
 }
 .app_name {
-  font-size: 1.5rem;
+  font-size: var(--app-name-font);
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #ffffff;
 }
