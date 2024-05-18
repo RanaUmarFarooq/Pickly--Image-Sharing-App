@@ -1,0 +1,24 @@
+.sideBar {
+  width: var(--SideBar-width);
+  height: 100vh;
+  background-color: var(--sidebar-bg-color);
+  overflow-y: auto;
+  border-right-width: calc(0.0625rem);
+  border-right-style: solid;
+  border-right-color: var(--side-bar-border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+}
+.app_branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  height: 35px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
