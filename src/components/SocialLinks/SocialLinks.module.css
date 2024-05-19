@@ -1,9 +1,10 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-left: 1rem;
-  margin-top: 1rem;
-  gap: 1.5rem;
+  margin-top: 1.5rem;
+  gap: 1.7rem;
   cursor: pointer;
 }
 .icon {
@@ -11,4 +12,7 @@
 }
 .icon:hover {
   color: #ffffff;
+}
+.socialLinks {
+  margin-top: auto;
 }

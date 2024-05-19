@@ -5,11 +5,11 @@ import SideBar from "../../components/SideBar/SideBar";
 const Home = () => {
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.sideBar}>
         <SideBar />
       </div>
-      <div>
-        <p>Photos</p>
+      <div className={styles.main_content}>
+        <h1>Photos</h1>
       </div>
     </div>
   );

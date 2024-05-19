@@ -8,16 +8,18 @@ import UserProfile from "../UserProfile/UserProfile";
 import SocialLinks from "../SocialLinks/SocialLinks";
 const SideBar = () => {
   return (
-    <div className={styles.sideBar}>
-      <div className={styles.app_branding}>
-        <img src={logo} alt="Pickly_logo" className={styles.app_logo} />
-        <span className={styles.app_name}>Pickly</span>
+    <div className={styles.container}>
+      <div className={styles.sideBar}>
+        <div className={styles.app_branding}>
+          <img src={logo} alt="Pickly_logo" className={styles.app_logo} />
+          <span className={styles.app_name}>PICKLY</span>
+        </div>
+        <MenuBar />
+        <Catagories />
+        <BottomMenu />
+        <UserProfile />
+        <SocialLinks />
       </div>
-      <MenuBar />
-      <Catagories />
-      <BottomMenu />
-      <UserProfile />
-      <SocialLinks />
     </div>
   );
 };
