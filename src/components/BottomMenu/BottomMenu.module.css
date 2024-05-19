@@ -1,10 +1,13 @@
+.container {
+  margin-top: 0.3rem;
+}
 .menu_item {
   display: flex;
   align-items: center;
+  padding-left: 1rem;
   gap: 0.3rem;
   cursor: pointer;
   width: 100%;
-  padding-left: 1rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
@@ -13,6 +16,9 @@
   width: 100vh;
   background-color: var(--menu-item-active-color);
 }
-.item_icon {
+.icon {
   font-size: 1.4rem;
+}
+.lastItem {
+  margin-top: 0.5rem;
 }

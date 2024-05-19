@@ -1,46 +1,72 @@
 import React from "react";
-import { Fa0 } from "react-icons/fa6";
 import styles from "./Catagories.module.css";
+import { Fa0 } from "react-icons/fa6";
+import {
+  PiCat,
+  PiPaintBrushLight,
+  PiHamburger,
+  PiUser,
+  PiCamera,
+  PiSun,
+  PiTShirt,
+  PiPaintBrushHousehold,
+  PiSkull,
+} from "react-icons/pi";
+import { SiTravisci } from "react-icons/si";
+
 const Catagories = () => {
   const imgCatagories = [
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Animals",
+      icon: <PiCat />,
     },
     {
       name: "Art",
-      icon: <Fa0 />,
+      icon: <PiPaintBrushLight />,
     },
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Characters",
+      icon: <PiUser />,
     },
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Food & Drinks",
+      icon: <PiHamburger />,
     },
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Photography",
+      icon: <PiCamera />,
     },
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Nature",
+      icon: <PiSun />,
     },
     {
-      name: "Art",
-      icon: <Fa0 />,
+      name: "Sci-Fi",
+      icon: <SiTravisci />,
+    },
+    {
+      name: "T-Shirt Design",
+      icon: <PiTShirt />,
+    },
+    {
+      name: "Paintings",
+      icon: <PiPaintBrushHousehold />,
+    },
+    {
+      name: "Horror",
+      icon: <PiSkull />,
     },
   ];
   return (
-    <div>
-      <p>Catagories</p>
+    <div className={styles.container}>
+      <p className={styles.heading}>Catagories</p>
       {imgCatagories.map((catagory, index) => (
-        <div className={styles.catagory_item}>
-          {catagory.icon}
+        <div className={styles.catagory_item} key={index}>
+          <span className={styles.icon}>{catagory.icon}</span>
           <span>{catagory.name}</span>
         </div>
       ))}
+      <hr className={styles.bottom_line} />
     </div>
   );
 };

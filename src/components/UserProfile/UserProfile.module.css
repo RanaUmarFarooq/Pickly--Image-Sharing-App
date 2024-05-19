@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  gap: 0.3rem;
+  cursor: pointer;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.user_img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: center;
+
+  object-fit: cover;
+}
+.user_name {
+  font-size: var(--normal-font);
+  color: #ffffff;
+  font-weight: 800px;
+}
+.container:hover {
+  color: #ffffff;
+  width: 100vh;
+  background-color: var(--menu-item-active-color);
+}
