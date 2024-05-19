@@ -4,14 +4,11 @@
   overflow: hidden;
 }
 .sideBar {
-  /* position: fixed;
-  top: 0;
-  left: 0; */
   width: var(--SideBar-width);
   background-color: var(--sidebar-bg-color);
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: auto;
 }

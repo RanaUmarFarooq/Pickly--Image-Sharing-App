@@ -14,6 +14,7 @@
     rgb(177, 75, 244) 49.9%,
     rgb(77, 145, 255) 100%
   );
+  --fallback-color: blue;
   --sidebar-bg-color: #0c1019;
   --body-bg-color: linear-gradient(
     112deg,

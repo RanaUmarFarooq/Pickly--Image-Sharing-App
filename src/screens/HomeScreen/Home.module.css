@@ -4,4 +4,78 @@
 .main_content {
   flex: 1;
   overflow-y: auto; /* Enable vertical scrolling for main content */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+.search_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text_input {
+  display: flex;
+  gap: 1rem;
+  width: 650px;
+  min-width: 350px;
+  background-color: #1a1a1a;
+  padding: 13px 0rem 13px 1rem;
+  border-radius: 50px;
+  border: 2px solid transparent; /* Initial border color */
+  transition: border-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.text_input:focus-within {
+  border-color: var(
+    --search-bar-border-color
+  ); /* Apply border color when input is focused */
+}
+
+.input {
+  flex: 1;
+  border: none; /* Remove default input border */
+  background-color: transparent;
+  outline: none; /* Remove default focus outline */
+  font-weight: 500;
+  color: #ffffff;
+  font-size: var(--normal-font);
+}
+
+.icon {
+  font-size: 1.4rem;
+  color: var(--text-grey);
+}
+.btn_search {
+  position: relative;
+  right: 20px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn_upload {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 12px 28px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: var(--normal-font);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: linear-gradient(
+    122deg,
+    rgb(250, 85, 96),
+    rgb(177, 75, 244),
+    rgb(77, 145, 255)
+  ); /* Set the background gradient */
+}
+.btn_upload:hover {
+  box-shadow: 0 0 17px rgb(255, 137, 145);
+}
+.upload_icon {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
