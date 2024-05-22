@@ -18,8 +18,8 @@
   gap: 1rem;
   width: 650px;
   min-width: 350px;
-  background-color: #1a1a1a;
-  padding: 13px 0rem 13px 1rem;
+  background-color: #101622;
+  padding: 12px 0rem 12px 1rem;
   border-radius: 50px;
   border: 2px solid transparent; /* Initial border color */
   transition: border-color 0.3s ease; /* Add transition for smooth effect */
@@ -58,7 +58,7 @@
   align-items: center;
   gap: 0.4rem;
 
-  padding: 12px 28px;
+  padding: 12px 27px;
   cursor: pointer;
   border-radius: 50px;
   font-size: var(--normal-font);

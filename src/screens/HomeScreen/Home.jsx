@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import SideBar from "../../components/SideBar/SideBar";
 import { FiSearch } from "react-icons/fi";
 import { BsStars } from "react-icons/bs";
+import SearchTags from "../../components/SearchTags/SearchTags";
 
 const Home = () => {
   const [isTyping, setIsTyping] = useState(false);
@@ -39,7 +40,9 @@ const Home = () => {
             Upload Image
           </button>
         </div>
-        <div>Images</div>
+        <div>
+          <SearchTags />
+        </div>
       </div>
     </div>
   );
