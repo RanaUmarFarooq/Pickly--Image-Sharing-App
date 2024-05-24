@@ -1,5 +1,5 @@
 .container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   overflow-x: auto;
 }
 .list_tags {
@@ -7,11 +7,7 @@
   width: 100vw;
   list-style: none;
   display: flex;
-
-  /* flex-wrap: wrap; */
   gap: 0.5rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 .tag_list_item {
   gap: 0.3rem;

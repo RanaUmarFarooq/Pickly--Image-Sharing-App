@@ -12,11 +12,12 @@ import {
   PiSkull,
 } from "react-icons/pi";
 import { SiTravisci } from "react-icons/si";
+import { MdWindow } from "react-icons/md";
 const SearchTags = () => {
   const imgCatagories = [
     {
       name: "All",
-      icon: <PiCat />,
+      icon: <MdWindow />,
     },
     {
       name: "Animals",
