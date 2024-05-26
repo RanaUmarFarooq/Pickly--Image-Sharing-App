@@ -1,19 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./Home.module.css";
 import SideBar from "../../components/SideBar/SideBar";
 import { FiSearch } from "react-icons/fi";
 import { BsStars } from "react-icons/bs";
+
 import SearchTags from "../../components/SearchTags/SearchTags";
 
 const Home = () => {
   const [isTyping, setIsTyping] = useState(false);
-  const handleChange = (event) => {
-    if (event.target.value) {
-      setIsTyping(true);
-    } else {
-      setIsTyping(false);
-    }
-  };
+
   return (
     <div className={styles.container}>
       <SideBar />
@@ -40,7 +35,7 @@ const Home = () => {
             Upload Image
           </button>
         </div>
-        <div>
+        <div className={styles.search_tags}>
           <SearchTags />
         </div>
       </div>
