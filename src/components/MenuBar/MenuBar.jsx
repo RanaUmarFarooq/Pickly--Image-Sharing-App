@@ -7,6 +7,7 @@ const MenuBar = () => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const handleItemClicked = (index) => {
+    setSelectedItem(index);
     console.log(index);
   };
   const menuBar = [
@@ -28,12 +29,14 @@ const MenuBar = () => {
       {menuBar.map((item, index) => (
         <div
           key={index}
-          className={styles.menu_item}
-          onClick={handleItemClicked}
+          className={`${styles.menu_item} ${
+            selectedItem === index ? styles.active : ""
+          }`}
+          onClick={() => handleItemClicked(index)}
         >
           <span
             className={`${styles.item_icon} ${
-              selectedItem === index ? styles.selected : ""
+              selectedItem === index ? styles.activeIcon : ""
             }`}
           >
             {item.icon}

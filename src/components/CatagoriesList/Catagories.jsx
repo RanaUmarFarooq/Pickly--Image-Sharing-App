@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Catagories.module.css";
 import { Fa0 } from "react-icons/fa6";
 import {
@@ -15,6 +15,14 @@ import {
 import { SiTravisci } from "react-icons/si";
 
 const Catagories = () => {
+  const [selectedCatagory, setSelectedCatagory] = useState(-1);
+
+  // ============= Function to select the Catagory =============
+  const activeCatagory = (index) => {
+    setSelectedCatagory(index);
+    console.log(selectedCatagory);
+  };
+
   const imgCatagories = [
     {
       name: "Animals",
@@ -61,7 +69,13 @@ const Catagories = () => {
     <div className={styles.container}>
       <p className={styles.heading}>Catagories</p>
       {imgCatagories.map((catagory, index) => (
-        <div className={styles.catagory_item} key={index}>
+        <div
+          className={`${styles.catagory_item} ${
+            selectedCatagory === index ? styles.active : ""
+          }`}
+          key={index}
+          onClick={() => activeCatagory(index)}
+        >
           <span className={styles.icon}>{catagory.icon}</span>
           <span>{catagory.name}</span>
         </div>

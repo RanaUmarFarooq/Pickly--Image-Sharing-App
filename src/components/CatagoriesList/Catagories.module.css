@@ -18,6 +18,11 @@
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
+.active {
+  color: #ffffff;
+  width: 100vh;
+  background-color: var(--menu-item-active-color);
+}
 .icon {
   font-size: 1.4rem;
 }
