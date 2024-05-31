@@ -14,26 +14,30 @@ import {
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from "react-icons/bs";
 import { SiTravisci } from "react-icons/si";
 import { MdWindow } from "react-icons/md";
-const SearchTags = () => {
+const SearchTags = ({ show }) => {
   const scrollRef = useRef(null);
   const [isLeftButtonVisible, setLeftButtonVisible] = useState(false);
   const [isRightButtonVisible, setRightButtonVisible] = useState(true);
   const [selectedTagIndex, setSelectedTagIndex] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollRef.current) {
-        const container = scrollRef.current;
-        const atEnd =
-          container.scrollLeft >= container.scrollWidth - container.clientWidth;
-        setRightButtonVisible(false);
-        setLeftButtonVisible(true);
-      }
-    };
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const atStart = container.scrollLeft === 0;
+      const atEnd =
+        container.scrollLeft >= container.scrollWidth - container.clientWidth;
 
+      setLeftButtonVisible(!atStart);
+      setRightButtonVisible(!atEnd);
+    }
+  };
+
+  useEffect(() => {
     const container = scrollRef.current;
     if (container) {
       container.addEventListener("scroll", handleScroll);
+      // Initial check
+      handleScroll();
     }
 
     return () => {
@@ -46,12 +50,14 @@ const SearchTags = () => {
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft += 600; // Adjust the scroll amount as needed
+      setTimeout(handleScroll, 0); // Ensure handleScroll runs after the scroll
     }
   };
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft -= 600; // Adjust the scroll amount as needed
+      setTimeout(handleScroll, 0); // Ensure handleScroll runs after the scroll
     }
   };
 
