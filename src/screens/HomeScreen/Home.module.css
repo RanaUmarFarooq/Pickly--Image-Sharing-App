@@ -9,6 +9,9 @@
   flex-direction: column;
   padding: 2rem 1.5rem;
 }
+/* .blur {
+  filter: blur(5px);
+} */
 .search_container {
   display: flex;
   align-items: center;
